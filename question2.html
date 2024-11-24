@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Validation</title>
+</head>
+<body>
+    <!-- Input field for user to enter a number -->
+    <input type="text" id="userInput" placeholder="Enter a number">
+    <!-- Button to trigger the checkInput function -->
+    <button onclick="checkInput()">Check</button>
+
+    <script>
+        // Function to validate if input is a number and check if it is less or greater than 10
+        function checkInput() {
+            // Get the value from the input field
+            let input = document.getElementById("userInput").value;
+            // Convert input to a number
+            let number = parseFloat(input);
+            
+            // Check if input is not a number
+            if (isNaN(number)) {
+                alert("Please insert a number!"); // Alert for non-numeric input
+            } else if (number < 10) {
+                alert("The number is lower than 10"); // Alert if number is less than 10
+            } else {
+                alert("The number is higher than 10"); // Alert if number is greater than or equal to 10
+            }
+        }
+    </script>
+</body>
+</html>
